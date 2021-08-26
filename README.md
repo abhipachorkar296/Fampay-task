@@ -45,11 +45,12 @@
     ```python
     DEBUG = True
     API_KEY_LIST = ["xxx", "zzz"]
-    SECRET_KEY = 'django-insecure-sifi0)iyg=3z0^qaxjwcryvr!%$%udg83f5=#8q!7s7+75)-q7@kie9f%'
+    SECRET_KEY = 'django-insecure-sifi0)iyg=2340^lkkasdb!%$%udg8asda3425=#8q!7234e+75)-q7@kie9f%'
     ```
 
   * While putting `DEBUG = False`, remember to modify `ALLOWED_HOSTS` (for just quick reference, modify as `ALLOWED_HOSTS = ['*']`)
 
+---
 ### Make sure ```Directory``` looks like
 
 ```
@@ -78,7 +79,7 @@ DRF_task
 ├── manage.py
 ├── README.md
 └── requirements.txt
-
+```
 * Migrate to the database
 
     ```bash
@@ -133,7 +134,7 @@ DRF_task
     ]
 }
 ```
-
+---
 > ### **GET** the stored video data with respect to search query in a paginated response sorted in descending order of published datetime.
 
 <!-- * HTTP Method - **GET** -->

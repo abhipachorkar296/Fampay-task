@@ -49,3 +49,38 @@
     ]
 }
 ```
+
+> ### **GET** the stored video data with respect to search query in a paginated response sorted in descending order of published datetime.
+
+<!-- * HTTP Method - **GET** -->
+
+* Endpoint - **`search/{query}`**
+
+* Headers  
+    Content-Type: application/json
+
+* Success Response  
+  * **Code** - `200`
+
+
+
+### Sample Response:
+
+```json
+[
+    {
+        "id": "X0gHJElGV9s",
+        "title": "Washington Football Team Finally Replaced Trent Williams 😳🔥 | 6”5 Beast",
+        "description": "Thanks for all the support don't forget to subscribe for the best Washington Football Content Dontae To My Channel here ...",
+        "urls": "https://i.ytimg.com/vi/X0gHJElGV9s/default.jpg",
+        "created_datetime": "2021-08-25T18:08:33Z"
+    },
+    {
+        "id": "SiuOfiMQDqc",
+        "title": "The PLZ Football Show  - Thu 26th August",
+        "description": "SUBSCRIBE ▶️ bit.ly/3kWKeak MORE FROM PLZ SOCCER ON YOUTUBE: ▶️ PLZ FOOTBALL NEWS: https://www.youtube.com/playlist?list... ▶️ PLZ ...",
+        "urls": "https://i.ytimg.com/vi/SiuOfiMQDqc/default.jpg",
+        "created_datetime": "2021-08-26T16:00:57Z"
+    }
+]
+```

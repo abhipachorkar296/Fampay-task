@@ -8,7 +8,93 @@
 * [DRF] 3.12.4 (www.django-rest-framework.org/): A powerful and flexible toolkit for building Rest APIs with [Django](https://www.djangoproject.com/)
 * Database used: [SQLite](https://www.sqlite.org/index.html) (for development)
 
+
+## **Local Setup**
+
+* If you wish to run your own build, first ensure you have python3 globally installed in your computer. If not, you can get python [here](https://www.python.org/downloads/).
+
+* Clone the repository
+
+  * Using HTTPS
+
+    ```sh
+    git clone https://github.com/abhipachorkar296/DRF_task.git
+    ```
+  
+  * Using SSH
+
+    ```sh
+    git clone git@github.com:abhipachorkar296/DRF_task.git
+    ```
+
+* Change your working directory to the the cloned folder
+
+    ```bash
+    cd path/to/DRF_task
+    ```
+
+* Download all the dependencies
+
+    ```bash
+    pip3 install -r requirements.txt
+    ```
+* Generate ***API KEYS*** from Google cloud console
+
+* Make a ``basic_settings.py`` file in the project folder directory (at the project settings.py level) and put all the ***API KEYS*** in a list `API_KEY` obtained from the Google API Console, Django ***SECRET_KEY*** and ***DEBUG*** mode as below
+
+    ```python
+    DEBUG = True
+    API_KEY_LIST = ["xxx", "zzz"]
+    SECRET_KEY = 'django-insecure-sifi0)iyg=3z0^qaxjwcryvr!%$%udg83f5=#8q!7s7+75)-q7@kie9f%'
+    ```
+
+  * While putting `DEBUG = False`, remember to modify `ALLOWED_HOSTS` (for just quick reference, modify as `ALLOWED_HOSTS = ['*']`)
+
+### Make sure ```Directory``` looks like
+
+```
+DRF_task
+├── task
+|    ├── migrations
+|    ├── __init__.py
+|    ├── admin.py
+|    ├── apps.py
+|    ├── models.py
+|    ├── pagination.py
+|    ├── search.py
+|    ├── serializers.py
+|    ├── tests.py
+|    ├── urls.py
+|    ├── videos_caller.py
+|    └── views.py
+├── DRF_task
+|   ├── __init__.py
+|   ├── settings.py
+|   ├── asgi.py
+|   ├── basic_settings.py
+|   ├── wsgi.py
+|   └── urls.py
+├── .gitignore
+├── manage.py
+├── README.md
+└── requirements.txt
+
+* Migrate to the database
+
+    ```bash
+    python3 manage.py makemigrations
+    python3 manage.py migrate
+    ```
+
+* Run server
+
+    ```sh
+    python manage.py runserver
+    ```
+
+
 ---
+
 ## **API Reference**
 > ### **GET** the stored video data in a paginated response sorted in descending order of published datetime.
 
@@ -21,8 +107,6 @@
 
 * Success Response  
   * **Code** - `200`
-
-
 
 ### Sample Response:
 
@@ -84,3 +168,4 @@
     }
 ]
 ```
+

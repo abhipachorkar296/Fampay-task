@@ -11,8 +11,6 @@
 
 ## **Local Setup**
 
-* If you wish to run your own build, first ensure you have python3 globally installed in your computer. If not, you can get python [here](https://www.python.org/downloads/).
-
 * Clone the repository
 
   * Using HTTPS
